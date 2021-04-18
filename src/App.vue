@@ -1,7 +1,9 @@
 <template>
   <div id="nav">
     <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/performance-optimisation">Performance Optimisation</router-link> |
+    <router-link to="/api-layer/status-handling">Status handling</router-link> |
+    <router-link to="/api-layer/aborting-requests">Aborting requests</router-link> |
   </div>
   <router-view/>
 </template>

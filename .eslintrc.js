@@ -1,3 +1,5 @@
+const offInDev = process.env.NODE_ENV === 'production' ? 'warn' : 'off'
+
 module.exports = {
   root: true,
   env: {
@@ -6,14 +8,18 @@ module.exports = {
   extends: [
     'plugin:vue/vue3-essential',
     '@vue/standard',
-    '@vue/typescript/recommended'
+    // '@vue/typescript/recommended'
   ],
   parserOptions: {
     ecmaVersion: 2020
   },
   rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off'
+    'no-console': offInDev,
+    'no-debugger': offInDev,
+    'no-unused-vars': offInDev,
+    'no-unused-expressions': 'off',
+    'prefer-promise-reject-errors': offInDev,
+    'comma-dangle': 'off'
   },
   overrides: [
     {

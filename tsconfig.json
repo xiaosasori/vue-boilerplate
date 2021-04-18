@@ -9,6 +9,7 @@
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
+    "noImplicitAny": false, // allow import js
     "sourceMap": true,
     "baseUrl": ".",
     "types": [
