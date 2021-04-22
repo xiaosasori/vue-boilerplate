@@ -1,11 +1,13 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 import { loadView } from './routerUtils'
-
+import { checkPermission } from '@/components/common/permission/checkPermission'
 import Home from '../views/Home.vue'
 import performanceOptimisationRoutes from '@/views/performance-optimisation/performanceOptimisationRoutes'
 import apiLayerRoutes from '@/views/api-layer/apiLayerRoutes'
+import securityRoutes from '@/views/security/securityRoutes'
 
-const routes: Array<RouteRecordRaw> = [
+// const routes: Array<RouteRecordRaw> = [
+const routes = [
   {
     path: '/',
     name: 'Home',
@@ -22,6 +24,7 @@ const routes: Array<RouteRecordRaw> = [
   },
   ...apiLayerRoutes,
   ...performanceOptimisationRoutes,
+  ...securityRoutes,
   {
     path: '/:catchAll(.*)',
     name: 'NotFound',
@@ -34,7 +37,6 @@ const router = createRouter({
   routes
 })
 
-/*
 router.beforeEach((to, from, next) => {
   // If there are no permissions to check then proceed
   if (!to.meta.permission) return next()
@@ -51,5 +53,5 @@ router.beforeEach((to, from, next) => {
   // No access!
   next(to.meta.permission?.noAccessRedirect || '/forbidden')
 })
-*/
+
 export default router

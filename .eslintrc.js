@@ -16,7 +16,7 @@ module.exports = {
   rules: {
     'no-console': offInDev,
     'no-debugger': offInDev,
-    'no-unused-vars': offInDev,
+    'no-unused-vars': 'warn',
     'no-unused-expressions': 'off',
     'prefer-promise-reject-errors': offInDev,
     'comma-dangle': 'off'

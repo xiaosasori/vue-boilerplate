@@ -4,6 +4,7 @@
     <router-link to="/performance-optimisation">Performance Optimisation</router-link> |
     <router-link to="/api-layer/status-handling">Status handling</router-link> |
     <router-link to="/api-layer/aborting-requests">Aborting requests</router-link> |
+    <router-link to="/security">Security</router-link> |
   </div>
   <router-view/>
 </template>
