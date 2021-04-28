@@ -10,7 +10,7 @@ export const registerBaseComponents = vm => {
     )
 
     requireComponent.keys().forEach(filePath => {
-      // Get component config
+      // Get component config. ['./BaseInput.vue', './BaseSelect.vue']
       const componentConfig = requireComponent(filePath)
       // Get filename from the filePath
       const fileName = filePath.split('/').slice(-1)[0]
